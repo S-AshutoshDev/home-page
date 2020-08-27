@@ -34,6 +34,9 @@ nav ul{
     list-style-type: none;
     justify-content: flex-end;
 }
+nav ul li:last-of-type{
+    display: none;
+}
 nav ul li a{
     margin-left: 10px;
     padding: 5px 10px;
@@ -42,21 +45,80 @@ nav ul li a{
     border: 2px solid transparent;
     border-radius: 15px 5px 2px 2px;
 }
-nav ul li a:hover{
+nav ul li a:hover, .menuOpen a:hover{
     background: lightgrey;
     border-bottom: 2px solid slategray;
 }
 .activeNavBtn{
     background: lightsalmon;
 }
-.hidden{
-    display: none;
+.hamBtn{
+    height: 30px;
+    width: 30px;
+    display: block;
 }
+.hamBtn:hover{
+    cursor: pointer;
+}
+.hamBtn div{
+    background: black;
+    border-radius: 3px;
+    height: 5px;
+    transition: all .3s ease-in-out;
+}
+.hamBtn div:nth-child(1){
+    margin: 5px 0 0 0;
+}
+.hamBtn div:nth-child(2){
+    margin: 4px 0;;
+}
+.activeHamBtn div:nth-child(1){
+    transform: rotate(45deg) translate(6.25px, 6.25px);
+}
+.activeHamBtn div:nth-child(2){
+    transform: translateX(-20vw);
+    background: transparent;
+}
+.activeHamBtn div:nth-child(3){
+    transform: rotate(-45deg) translate(6.25px, -6.25px);
+}
+.sideSection{
+    position: fixed;
+    height: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuOpen{
+    display: block;
+    position: fixed;
+    height: 150px;
+    width: auto;
+    top: 10%;
+    right: 10%;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+
+
+}
+.menuOpen a{
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+    border-radius: 15px 5px 2px 2px;
+    border: 2px solid transparent;
+}
+
 
 .landing{
     padding: 10% 0;
+    margin: 0 10%;
     display: flex;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
 }
@@ -92,10 +154,17 @@ nav ul li a:hover{
     cursor: pointer;
 }
 .text h1 span{
+    display: inline-block;
     animation: RGB 5s ease infinite;
 }
-.landing figure{
+.landing figure svg{
+    width: 30vw;
+
 }
+
+
+
+
 
 @keyframes RGB {
     0%, 100%{
@@ -107,4 +176,46 @@ nav ul li a:hover{
     66.66%{
         text-shadow: 0 0 15px rgba(0, 0, 255, .6);
     }
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+    .landing{
+        flex-direction: column;
+        justify-content: flex-start;  
+    }
+    .text{
+        text-align: center;
+    }
+    .landing figure svg{
+        width: 60vw;
+    }
+}
+@media only screen and (max-width: 650px){
+    nav ul li a{
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 585px){
+    .landing figure svg{
+        width: 80vw;
+    }
+    .navBtn1{
+        display: none;
+    }
+    .navBtn2{
+        display: none;
+    }
+    .navBtn3{
+        display: none;
+    }
+    nav{
+        flex: 0;
+    }
+    nav ul li:last-child{
+        display: block;
+    }
+
 }
