@@ -1,79 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Page: Ashutosh</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <header>
-            <figure class="logo-container">
-                <img src="" alt="">
-                <span>Ashutosh Kumar</span>
-            </figure>
-            <nav>
-                <ul>
-                    <li ><a class="navBtn1 activeNavBtn" href="#">Home</a></li>
-                    <li ><a class="navBtn2" href="#">Projects</a></li>
-                    <li ><a class="navBtn3" href="#">Contact</a></li>
-                    <li class="hamBtn">
-                        <div class=""></div>
-                        <div class=""></div>
-                        <div class=""></div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="sideSection">
-                <a class="activeNavBtn" href="#">Home</a>
-                <a class="" href="#">Projects</a>
-                <a class="" href="#">Contact</a>
-            </div>
-        </header>
-        
-        <main>
-            <section class="landing">
-                <div class="text">
-                    <h1>
-                        Hey! I'm a <span>Web Developer.</span>
-                    </h1>
-                    <button class="button1">See Projects</button>
-                    <button class="button2">Contact</button>
-                </div>
-                <figure class="mainImg">
-                    <svg width="auto" height="auto" viewBox="0 0 326 238" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="285" height="153" rx="18" fill="#C4C4C4"/>
-                        <rect x="16" y="13" width="252" height="126" fill="white"/>
-                        <rect x="46" y="40" width="91" height="6" rx="3" fill="#8B8B8B" fill-opacity="0.87"/>
-                        <rect x="46" y="84" width="197" height="6" rx="3" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="46" y="51" width="161" height="6" rx="3" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="47" y="95" width="196" height="6" rx="3" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="48" y="106" width="195" height="6" rx="3" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="129" y="153" width="26" height="41" fill="#C4C4C4"/>
-                        <rect x="87" y="194" width="111" height="5" fill="#C4C4C4"/>
-                        <rect x="26" y="18" width="48" height="6" rx="3" fill="#FF0000"/>
-                        <rect x="36" y="29" width="32" height="6" rx="3" fill="#FFE600" fill-opacity="0.87"/>
-                        <rect x="36" y="62" width="32" height="6" rx="3" fill="#FFE600" fill-opacity="0.87"/>
-                        <rect x="36" y="73" width="32" height="6" rx="3" fill="#14FF00" fill-opacity="0.87"/>
-                        <rect x="36" y="117" width="32" height="6" rx="3" fill="#42FF00" fill-opacity="0.87"/>
-                        <rect x="26" y="128" width="48" height="6" rx="3" fill="#FF0000"/>
-                        <rect x="229" y="120" width="97" height="118" rx="5" fill="#C4C4C4"/>
-                        <rect x="238" y="128" width="79" height="102" fill="white"/>
-                        <rect x="247" y="147" width="31" height="5" rx="2.5" fill="#8B8B8B" fill-opacity="0.87"/>
-                        <rect x="247" y="186" width="67" height="5" rx="2.5" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="247" y="157" width="55" height="5" rx="2.5" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="248" y="196" width="66" height="5" rx="2.5" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="248" y="205" width="66" height="5" rx="2.5" fill="#898989" fill-opacity="0.87"/>
-                        <rect x="241" y="128" width="16" height="5" rx="2.5" fill="#FF0000"/>
-                        <rect x="245" y="138" width="10" height="5" rx="2.5" fill="#FFE600" fill-opacity="0.87"/>
-                        <rect x="245" y="167" width="10" height="5" rx="2.5" fill="#FFE600" fill-opacity="0.87"/>
-                        <rect x="245" y="176" width="10" height="5" rx="2.5" fill="#14FF00" fill-opacity="0.87"/>
-                        <rect x="245" y="215" width="10" height="5" rx="2.5" fill="#42FF00" fill-opacity="0.87"/>
-                        <rect x="241" y="225" width="16" height="5" rx="2.5" fill="#FF0000"/>
-                    </svg>
-                </figure>
-            </section>
-        </main>
-    </body>
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ashutosh Kumar</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <header>
+         <span>Ashutosh Kumar</span>
+         <a href="#home" class="navBtn1 activePage">Home</a>
+         <a href="#project" class="navBtn2">Projects</a>
+         <a href="#contact" class="navBtn3">Contact</a>
+         <figure class="menuButton">
+            <svg width="24" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 2H20M0 8.69565H20M0 16H20" stroke="black" stroke-width="3"/>
+            </svg>
+        </figure>
+        <figure class="closeButton hidden">
+            <svg width="24" height="24" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L15 15M15 2L2 15" stroke="black" stroke-width="3"/>
+            </svg>                             
+         </figure>
+         <div class="menu hidden">
+            <a href="#home" class="navBtn1 activePage">Home</a>
+            <a href="#project" class="navBtn2">Projects</a>
+            <a href="#contact" class="navBtn3">Contact</a>
+         </div>
+     </header>
+     <main>
+         <section class="home">
+             <div class="description">
+                 <span class="title">Hey! I'm a <span>Web Developer!</span></span>
+                 <div class="buttons">
+                     <a href="#project" class="pageLink1">See projects</a>
+                     <a href="#contact" class="pageLink2">Contact</a>
+                 </div>
+             </div>
+             <figure>
+                <svg width="326" height="238" viewBox="0 0 326 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M267 0H18C8.05887 0 0 8.05887 0 18V135C0 144.941 8.05887 153 18 153H267C276.941 153 285 144.941 285 135V18C285 8.05887 276.941 0 267 0Z" fill="#C4C4C4"/>
+                    <path d="M268 13H16V139H268V13Z" fill="white"/>
+                    <path d="M134 40H49C47.3431 40 46 41.3431 46 43C46 44.6569 47.3431 46 49 46H134C135.657 46 137 44.6569 137 43C137 41.3431 135.657 40 134 40Z" fill="#8B8B8B" fill-opacity="0.87"/>
+                    <path d="M240 84H49C47.3431 84 46 85.3431 46 87C46 88.6569 47.3431 90 49 90H240C241.657 90 243 88.6569 243 87C243 85.3431 241.657 84 240 84Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M204 51H49C47.3431 51 46 52.3431 46 54C46 55.6569 47.3431 57 49 57H204C205.657 57 207 55.6569 207 54C207 52.3431 205.657 51 204 51Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M240 95H50C48.3431 95 47 96.3431 47 98C47 99.6569 48.3431 101 50 101H240C241.657 101 243 99.6569 243 98C243 96.3431 241.657 95 240 95Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M240 106H51C49.3431 106 48 107.343 48 109C48 110.657 49.3431 112 51 112H240C241.657 112 243 110.657 243 109C243 107.343 241.657 106 240 106Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M155 153H129V194H155V153Z" fill="#C4C4C4"/>
+                    <path d="M198 194H87V199H198V194Z" fill="#C4C4C4"/>
+                    <path d="M71 18H29C27.3431 18 26 19.3431 26 21C26 22.6569 27.3431 24 29 24H71C72.6569 24 74 22.6569 74 21C74 19.3431 72.6569 18 71 18Z" fill="#FF0000"/>
+                    <path d="M65 29H39C37.3431 29 36 30.3431 36 32C36 33.6569 37.3431 35 39 35H65C66.6569 35 68 33.6569 68 32C68 30.3431 66.6569 29 65 29Z" fill="#FFE600" fill-opacity="0.87"/>
+                    <path d="M65 62H39C37.3431 62 36 63.3431 36 65C36 66.6569 37.3431 68 39 68H65C66.6569 68 68 66.6569 68 65C68 63.3431 66.6569 62 65 62Z" fill="#FFE600" fill-opacity="0.87"/>
+                    <path d="M65 73H39C37.3431 73 36 74.3431 36 76C36 77.6569 37.3431 79 39 79H65C66.6569 79 68 77.6569 68 76C68 74.3431 66.6569 73 65 73Z" fill="#14FF00" fill-opacity="0.87"/>
+                    <path d="M65 117H39C37.3431 117 36 118.343 36 120C36 121.657 37.3431 123 39 123H65C66.6569 123 68 121.657 68 120C68 118.343 66.6569 117 65 117Z" fill="#42FF00" fill-opacity="0.87"/>
+                    <path d="M71 128H29C27.3431 128 26 129.343 26 131C26 132.657 27.3431 134 29 134H71C72.6569 134 74 132.657 74 131C74 129.343 72.6569 128 71 128Z" fill="#FF0000"/>
+                    <path d="M321 120H234C231.239 120 229 122.239 229 125V233C229 235.761 231.239 238 234 238H321C323.761 238 326 235.761 326 233V125C326 122.239 323.761 120 321 120Z" fill="#C4C4C4"/>
+                    <path d="M317 128H238V230H317V128Z" fill="white"/>
+                    <path d="M275.5 147H249.5C248.119 147 247 148.119 247 149.5C247 150.881 248.119 152 249.5 152H275.5C276.881 152 278 150.881 278 149.5C278 148.119 276.881 147 275.5 147Z" fill="#8B8B8B" fill-opacity="0.87"/>
+                    <path d="M311.5 186H249.5C248.119 186 247 187.119 247 188.5C247 189.881 248.119 191 249.5 191H311.5C312.881 191 314 189.881 314 188.5C314 187.119 312.881 186 311.5 186Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M299.5 157H249.5C248.119 157 247 158.119 247 159.5C247 160.881 248.119 162 249.5 162H299.5C300.881 162 302 160.881 302 159.5C302 158.119 300.881 157 299.5 157Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M311.5 196H250.5C249.119 196 248 197.119 248 198.5C248 199.881 249.119 201 250.5 201H311.5C312.881 201 314 199.881 314 198.5C314 197.119 312.881 196 311.5 196Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M311.5 205H250.5C249.119 205 248 206.119 248 207.5C248 208.881 249.119 210 250.5 210H311.5C312.881 210 314 208.881 314 207.5C314 206.119 312.881 205 311.5 205Z" fill="#898989" fill-opacity="0.87"/>
+                    <path d="M254.5 128H243.5C242.119 128 241 129.119 241 130.5C241 131.881 242.119 133 243.5 133H254.5C255.881 133 257 131.881 257 130.5C257 129.119 255.881 128 254.5 128Z" fill="#FF0000"/>
+                    <path d="M252.5 138H247.5C246.119 138 245 139.119 245 140.5C245 141.881 246.119 143 247.5 143H252.5C253.881 143 255 141.881 255 140.5C255 139.119 253.881 138 252.5 138Z" fill="#FFE600" fill-opacity="0.87"/>
+                    <path d="M252.5 167H247.5C246.119 167 245 168.119 245 169.5C245 170.881 246.119 172 247.5 172H252.5C253.881 172 255 170.881 255 169.5C255 168.119 253.881 167 252.5 167Z" fill="#FFE600" fill-opacity="0.87"/>
+                    <path d="M252.5 176H247.5C246.119 176 245 177.119 245 178.5C245 179.881 246.119 181 247.5 181H252.5C253.881 181 255 179.881 255 178.5C255 177.119 253.881 176 252.5 176Z" fill="#14FF00" fill-opacity="0.87"/>
+                    <path d="M252.5 215H247.5C246.119 215 245 216.119 245 217.5C245 218.881 246.119 220 247.5 220H252.5C253.881 220 255 218.881 255 217.5C255 216.119 253.881 215 252.5 215Z" fill="#42FF00" fill-opacity="0.87"/>
+                    <path d="M254.5 225H243.5C242.119 225 241 226.119 241 227.5C241 228.881 242.119 230 243.5 230H254.5C255.881 230 257 228.881 257 227.5C257 226.119 255.881 225 254.5 225Z" fill="#FF0000"/>
+                </svg>
+             </figure>
+         </section>
+         <section class="project"></section>
+         <section class="contact"></section>
+     </main>
+
+     <script src="main.js"></script>
+ </body>
+ </html>
