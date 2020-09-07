@@ -20,11 +20,11 @@ onload = () => {
     const homeButton = document.querySelectorAll(`.navBtn1`)
     const projectButton = document.querySelectorAll(`.navBtn2`)
     const contactButton = document.querySelectorAll(`.navBtn3`)
-    
+
     const homeSection = document.querySelector(`section.home`)
     const projectSection = document.querySelector(`section.project`)
     const contactSection = document.querySelector(`section.contact`)
-    
+
 
     homeButton[0].addEventListener(`click`, () => {
         homeButton[0].classList.add(`activePage`)
@@ -33,12 +33,12 @@ onload = () => {
         homeButton[1].classList.add(`activePage`)
         projectButton[1].classList.remove(`activePage`)
         contactButton[1].classList.remove(`activePage`)
-        
+
         homeSection.style.display = `flex`
         projectSection.style.display = `none`
         contactSection.style.display = `none`
 
-    
+
     })
     projectButton[0].addEventListener(`click`, () => {
         homeButton[0].classList.remove(`activePage`)
@@ -49,11 +49,11 @@ onload = () => {
         contactButton[1].classList.remove(`activePage`)
 
         homeSection.style.display = `none`
-        projectSection.style.display = `flex`
+        projectSection.style.display = `block`
         contactSection.style.display = `none`
 
-    
-    
+
+
     })
     contactButton[0].addEventListener(`click`, () => {
         homeButton[0].classList.remove(`activePage`)
@@ -67,8 +67,8 @@ onload = () => {
         projectSection.style.display = `none`
         contactSection.style.display = `flex`
 
-    
-    
+
+
     })
     homeButton[1].addEventListener(`click`, () => {
         homeButton[0].classList.add(`activePage`)
@@ -81,7 +81,7 @@ onload = () => {
         homeSection.style.display = `flex`
         projectSection.style.display = `none`
         contactSection.style.display = `none`
-    
+
     })
     projectButton[1].addEventListener(`click`, () => {
         homeButton[0].classList.remove(`activePage`)
@@ -92,10 +92,10 @@ onload = () => {
         contactButton[1].classList.remove(`activePage`)
 
         homeSection.style.display = `none`
-        projectSection.style.display = `flex`
+        projectSection.style.display = `block`
         contactSection.style.display = `none`
-    
-    
+
+
     })
     contactButton[1].addEventListener(`click`, () => {
         homeButton[0].classList.remove(`activePage`)
@@ -104,7 +104,7 @@ onload = () => {
         homeButton[1].classList.remove(`activePage`)
         projectButton[1].classList.remove(`activePage`)
         contactButton[1].classList.add(`activePage`)
-    
+
         homeSection.style.display = `none`
         projectSection.style.display = `none`
         contactSection.style.display = `flex`
@@ -122,8 +122,8 @@ onload = () => {
         homeSection.style.display = `none`
         projectSection.style.display = `flex`
         contactSection.style.display = `none`
-    
-    
+
+
     })
     contactButton[2].addEventListener(`click`, () => {
         homeButton[0].classList.remove(`activePage`)
@@ -132,7 +132,7 @@ onload = () => {
         homeButton[1].classList.remove(`activePage`)
         projectButton[1].classList.remove(`activePage`)
         contactButton[1].classList.add(`activePage`)
-    
+
         homeSection.style.display = `none`
         projectSection.style.display = `none`
         contactSection.style.display = `flex`
@@ -140,9 +140,23 @@ onload = () => {
     })
 
 
-    
-    
-
+    const fetchProjects = async () => {
+        const ProjectData = await fetch("./projects.json")
+        const projDATA = await ProjectData.json()
+        projectsEdit(projDATA)
+    }
+    fetchProjects()
+    function projectsEdit(data){
+        data.forEach(element => {
+            console.log(element)
+            document.querySelector(`.project`).innerHTML += `
+            <div id="${element.id}" class="projectTile">
+            <h1 class="projTitle">${element.Title}</h1>
+                <span class="projectdate">${element.DateAdded}</span>
+                <a target="blank" href="${element.URL}" class="projectURL">Insight</a> </div>
+            `
+        });
+    }    
 
 
 }

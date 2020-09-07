@@ -1,12 +1,14 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
 }
-header{
+header {
     position: fixed;
     top: 0;
     left: 5%;
@@ -16,13 +18,13 @@ header{
     display: flex;
     padding-top: 20px;
     align-items: baseline;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, 0.9);
 }
-header span{
+header span {
     font-size: 2em;
     flex: 1;
 }
-header a{
+header a {
     text-decoration: none;
     color: black;
     font-size: 1.25em;
@@ -31,50 +33,48 @@ header a{
     border: 2px solid transparent;
     border-radius: 15px 5px 2px 2px;
 }
-header figure{
+header figure {
     display: none;
-    cursor: pointer;  
+    cursor: pointer;
 }
-.menu a{
+.menu a {
     display: none;
 }
 
-.activePage{
+.activePage {
     border-color: tomato;
 }
-header a:hover{
+header a:hover {
     background: tomato;
     border-color: tomato;
 }
-.hidden{
+.hidden {
     display: none;
 }
 
-
-
-main{
+main {
     width: 90%;
     margin: auto;
 }
-section.home{
+section.home {
     display: flex;
     justify-content: space-around;
     min-height: 100vh;
     align-items: center;
 }
-.home .description .title{
+.home .description .title {
     display: block;
     font-size: 2.5em;
 }
-.home .description .title span{
+.home .description .title span {
     display: inline-block;
     margin-right: 20px;
 }
-.home .description .buttons{
+.home .description .buttons {
     display: flex;
     justify-content: start;
 }
-.home .description .buttons a{
+.home .description .buttons a {
     text-decoration: none;
     color: black;
     border: 2px solid tomato;
@@ -83,22 +83,30 @@ section.home{
     font-size: 1.25em;
     margin: 10px 20px 0 0;
 }
-.home .description .buttons a:hover{
+.home .description .buttons a:hover {
     background: tomato;
     color: white;
 }
 
-
-.project{
+.project {
     display: none;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    padding-top: 10vh;
+}
+.project .projectTile {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px 5px 2px 2px;
+}
+.project .projectTile * {
+    display: block;
 }
 
-
-
-.contact{
+.contact {
     display: none;
     height: 100vh;
     flex-direction: column;
@@ -107,16 +115,15 @@ section.home{
     align-items: center;
     justify-content: space-evenly;
 }
-.contact span{
+.contact span {
     font-size: 2em;
     border: 2px solid transparent;
 }
-.contact span:hover{
+.contact span:hover {
     border-bottom: 2px solid tomato;
 }
 
-
-.contact div{
+.contact div {
     margin-top: 5%;
     padding: 5% 2%;
     height: 50vh;
@@ -127,76 +134,69 @@ section.home{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
-
 }
-.contact .contact1 a{
+.contact .contact1 a {
     border: 2px solid tomato;
     color: black;
     text-decoration: none;
     padding: 5px;
     border-radius: 5px 15px 2px 2px;
 }
-.contact .contact1 a:hover{
+.contact .contact1 a:hover {
     background: tomato;
     color: white;
 }
 
-
-
-@media (max-width: 768px){
-    header a{
+@media (max-width: 768px) {
+    header a {
         margin-left: 5px;
         padding: 0 5px;
     }
-    section{
+    section {
         flex-direction: column-reverse;
     }
-    section.home{
+    section.home {
         justify-content: center;
     }
-    .home .description{
+    .home .description {
     }
-    .home figure{
+    .home figure {
         padding-bottom: 20px;
     }
 
-    .contact .contact1{
+    .contact .contact1 {
         width: 70vw;
     }
-    
 }
 
-@media (max-width: 610px)
-{
-    header a{
+@media (max-width: 610px) {
+    header a {
         display: none;
     }
-    header figure{
+    header figure {
         display: block;
     }
-    header .menu{
+    header .menu {
         position: absolute;
         top: 10%;
         right: 10%;
         border-radius: 15px 5px 2px 2px;
-        background: rgba(245, 245, 245, .9);
+        background: rgba(245, 245, 245, 0.9);
         padding: 10px 10px 0 5px;
         z-index: 1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    header .menu a{
+    header .menu a {
         display: block;
         margin-bottom: 10px;
     }
-    .contact .contact1{
+    .contact .contact1 {
         width: 80vw;
     }
-
 }
 
-@media (max-height: 500px){
-    body{
+@media (max-height: 500px) {
+    body {
         min-height: fit-content;
         padding-top: 15%;
         padding-bottom: 10%;
