@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #3A1C71;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+}
+
+header {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav a.LOGO {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+header nav ul {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  margin: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25em;
+}
+header nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+header nav a.LOGIN_REGISTER {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25em;
+  position: relative;
+  display: inline-block;
+}
+header nav a.LOGIN_REGISTER:hover {
+  cursor: not-allowed;
+}
+header nav div.MenuBtn {
+  display: none;
+}
+header div.Menu {
+  display: none;
+  position: fixed;
+  top: 68px;
+  right: 0;
+  width: 175px;
+  height: 275px;
+  padding: 20px;
+  background: black;
+  z-index: 9;
+  transition: all 0.5s ease-in-out;
+}
+
+main section#Home {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+main section#Home img.Mountain {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  height: 30vh;
+}
+main section#Home img.Mountain:nth-child(1) {
+  right: 0%;
+  z-index: 2;
+}
+main section#Home img.Mountain:nth-child(2) {
+  right: 20%;
+  z-index: 3;
+}
+main section#Home img.Mountain:nth-child(3) {
+  right: 40%;
+  z-index: 4;
+}
+main section#Home img.Moon {
+  position: absolute;
+  top: 12vh;
+  left: 10%;
+  height: 15%;
+  text-shadow: 0 0 10px white;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 20px white;
+  filter: blur(1px);
+}
+main section#Home img.settelite {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  height: 3vh;
+  width: auto;
+  animation: setteliteFlow 10s linear infinite;
+  animation-delay: 5s;
+  z-index: 1;
+}
+@keyframes setteliteFlow {
+  0% {
+    transform: translatey(0vh) rotate(-47deg);
+    filter: drop-shadow(0 0 5px red);
+  }
+  50% {
+    transform: translatey(-50vh) rotate(-47deg);
+    filter: drop-shadow(0 0 5px yellow);
+  }
+  100% {
+    transform: translatey(-100vh) rotate(-47deg);
+    filter: drop-shadow(0 0 5px orange);
+  }
+}
+main section#Home div.star {
+  position: absolute;
+  animation: starsFlow linear infinite;
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 0 0 3px white;
+  background: white;
+  border-radius: 50%;
+}
+@keyframes starsFlow {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+main section#Home span.Title {
+  font-size: 2.25em;
+  color: white;
+  position: absolute;
+  width: auto;
+  top: 50%;
+  padding-left: 5%;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: auto;
+  transform: translate(0%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+main section#Home span.Title span.animated {
+  background: transparent;
+  animation: TransformText 2500ms infinite;
+  animation-delay: 2500ms;
+}
+@keyframes TransformText {
+  0%, 100% {
+    color: rgba(255, 255, 255, 0);
+    width: auto;
+  }
+  20%, 80% {
+    color: white;
+    width: auto;
+  }
+}
+main section#Skills {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+  background-attachment: fixed;
+  padding: 10vh 5%;
+  align-items: center;
+}
+main section#Skills span.Title {
+  font-weight: 900;
+  margin: 20px 0;
+  color: white;
+  font-size: 2em;
+  width: 250px;
+  text-align: center;
+  border-bottom: 3px solid red;
+  animation: borderRGB 3s linear infinite;
+}
+@keyframes borderRGB {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+main section#Skills div.SkillSet {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+main section#Skills div.SkillSet div.SkillCard {
+  background: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  height: auto;
+  width: 300px;
+  margin: 5px 20px;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+main section#Skills div.SkillSet div.SkillCard img.SkillIcon {
+  pointer-events: none;
+  height: 92px;
+  width: 92px;
+}
+main section#Skills div.SkillSet div.SkillCard span.SkillTitle {
+  pointer-events: none;
+  margin-left: 5px;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: white;
+}
+main section#Skills div.SkillSet div.SkillCard:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+main section#Skills div.SkillSet div.Skill1:hover {
+  box-shadow: 0 0 10px red;
+}
+main section#Skills div.SkillSet div.Skill2:hover {
+  box-shadow: 0 0 10px blue;
+}
+main section#Skills div.SkillSet div.Skill3:hover {
+  box-shadow: 0 0 10px purple;
+}
+main section#Skills div.SkillSet div.Skill4:hover {
+  box-shadow: 0 0 10px yellow;
+}
+main section#Skills div.SkillSet div.Skill5 img.SkillIcon {
+  animation: ReactRotate 5s linear infinite;
+}
+@keyframes ReactRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+main section#Skills div.SkillSet div.Skill5:hover {
+  box-shadow: 0 0 10px lightblue;
+}
+main section#Skills div.SkillSet div.Skill6:hover {
+  box-shadow: 0 0 10px yellow;
+}
+main section#Projects {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  padding: 10vh 5%;
+  align-content: center;
+}
+main section#Projects span.Title {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: white;
+  width: 250px;
+  border-bottom: 2px solid red;
+  margin: 20px 0;
+  text-shadow: 0 0 2px grey;
+  text-align: center;
+  animation: borderRGB 5s linear infinite;
+}
+@keyframes borderRGB {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+main section#Projects div.ProjectSet {
+  text-align: center;
+}
+main section#Projects div.ProjectSet div.ProjectCard {
+  position: relative;
+  display: inline-block;
+  min-width: 280px;
+  margin: 5px 10px;
+  padding: 15px;
+  color: white;
+  height: 60vh;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 25%;
+  cursor: not-allowed;
+}
+main section#Projects div.ProjectSet div.ProjectCard:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+main section#Projects div.ProjectSet div.ProjectCard span.ProjectTitle {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 1.25em;
+}
+main section#Contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 10vh 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section#Contact span.Title {
+  display: block;
+  font-size: 2em;
+  width: 250px;
+  text-align: center;
+  border-bottom: 2px solid red;
+  box-shadow: 3px solid red;
+  animation: borderRGB 3s linear infinite;
+}
+@keyframes borderRGB {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+main section#Contact div.ContactSet {
+  position: relative;
+  margin: auto;
+  display: flex;
+  width: 100%;
+  height: 62px;
+  margin: auto;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+main section#Contact div.ContactSet div.ContactCard {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+main section#Contact div.ContactSet div.ContactCard:hover {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.5);
+}
+main section#Contact div.ContactSet div.ContactCard img.ContactIcon {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 1px transparent;
+}
+main section#Contact div.ContactSet div.ContactCard a.ContactTitle {
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 56px;
+  transform: translateY(-50%);
+  height: 100%;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  pointer-events: none;
+}
+main section#Contact div.ContactSet div.Contact2,
+main section#Contact div.ContactSet div.Contact3,
+main section#Contact div.ContactSet div.Contact4 {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: fit-content;
+  }
+  header nav {
+    position: relative;
+  }
+  header nav a.LOGO {
+    position: relative;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav a.LOGIN_REGISTER {
+    display: none;
+  }
+  header nav div.MenuBtn {
+    display: block;
+    position: relative;
+    right: 0;
+    height: 48px;
+    width: 48px;
+    background: transparent;
+    cursor: pointer;
+  }
+  header nav div.MenuBtn div.Slice {
+    transition: all 0.5s ease-in-out;
+    height: 5px;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+  }
+  header nav div.MenuBtn.Sliced div.Slice:nth-child(1) {
+    transform: rotateZ(45deg) translateX(1px) translateY(20px);
+  }
+  header nav div.MenuBtn.Sliced div.Slice:nth-child(2) {
+    transform: translateX(-10vw);
+    background: transparent;
+  }
+  header nav div.MenuBtn.Sliced div.Slice:nth-child(3) {
+    transform: rotateZ(-45deg) translateX(1px) translateY(-20px);
+  }
+  header div.Menu.Sliced {
+    display: block;
+  }
+  header div.Menu.Sliced a {
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0 0 0;
+    text-decoration: none;
+    color: white;
+  }
+}

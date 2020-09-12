@@ -1,0 +1,600 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #3A1C71;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+
+}
+
+header {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  background: rgba($color: #000000, $alpha: 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a.LOGO {
+      text-decoration: none;
+      color: white;
+      font-size: 2em;
+    }
+
+    ul {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          margin: 5px 10px;
+          text-decoration: none;
+          color: white;
+          font-size: 1.25em;
+
+          &:hover {
+            border-bottom: 2px solid white;
+          }
+        }
+      }
+    }
+
+    a.LOGIN_REGISTER {
+      text-decoration: none;
+      color: white;
+      font-size: 1.25em;
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    div.MenuBtn {
+      display: none;
+    }
+  }
+
+  div.Menu {
+    display: none;
+    position: fixed;
+    top: 68px;
+    right: 0;
+    width: 175px;
+    height: 275px;
+    padding: 20px;
+    background: rgba($color: #000000, $alpha: 1);
+    z-index: 9;
+    transition: all .5s ease-in-out;
+  }
+}
+
+main {
+  section#Home {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+
+    img.Mountain {
+      position: absolute;
+      bottom: 0;
+      width: auto;
+      height: 30vh;
+    }
+
+    img.Mountain:nth-child(1) {
+      right: 0%;
+      z-index: 2;
+    }
+
+    img.Mountain:nth-child(2) {
+      right: 20%;
+      z-index: 3;
+    }
+
+    img.Mountain:nth-child(3) {
+      right: 40%;
+      z-index: 4;
+    }
+
+    img.Moon {
+      position: absolute;
+      top: 12vh;
+      left: 10%;
+      height: 15%;
+      text-shadow: 0 0 10px white;
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 0 0 20px white;
+      filter: blur(1px);
+    }
+
+    img.settelite {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      height: 3vh;
+      width: auto;
+      animation: setteliteFlow 10s linear infinite;
+      animation-delay: 5s;
+      z-index: 1;
+
+      @keyframes setteliteFlow {
+        0% {
+          transform: translatey(0vh) rotate(-47deg);
+          filter: drop-shadow(0 0 5px red);
+
+
+        }
+
+        50% {
+          transform: translatey(-50vh) rotate(-47deg);
+          filter: drop-shadow(0 0 5px yellow);
+
+        }
+
+        100% {
+
+          transform: translatey(-100vh) rotate(-47deg);
+          filter: drop-shadow(0 0 5px orange);
+
+        }
+      }
+    }
+
+    div.star {
+      position: absolute;
+      animation: starsFlow linear infinite;
+      opacity: 0;
+      z-index: 0;
+      box-shadow: 0 0 3px white;
+      background: rgba(255, 255, 255);
+      border-radius: 50%;
+
+      @keyframes starsFlow {
+        0% {
+          opacity: 0;
+          transform: translateY(0);
+        }
+
+        10%,
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+    }
+
+    span.Title {
+      font-size: 2.25em;
+      color: rgba($color: #ffffff, $alpha: 1);
+      position: absolute;
+      width: auto;
+      top: 50%;
+      padding-left: 5%;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: auto;
+      transform: translate(0%, -50%);
+      background: rgba($color: #000000, $alpha: 0.7);
+      z-index: 1;
+
+      span.animated {
+
+        background: transparent;
+        animation: TransformText 2500ms infinite;
+        animation-delay: 2500ms;
+        ;
+      }
+    }
+
+
+    @keyframes TransformText {
+
+      0%,
+      100% {
+        color: rgba($color: #ffffff, $alpha: 0);
+        width: auto;
+      }
+
+      20%,
+      80% {
+        color: rgba($color: #ffffff, $alpha: 1);
+        width: auto;
+      }
+    }
+
+  }
+
+  section#Skills {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    flex-direction: column;
+    background-attachment: fixed;
+    padding: 10vh 5%;
+    align-items: center;
+
+    span.Title {
+      font-weight: 900;
+      margin: 20px 0;
+      color: white;
+      font-size: 2em;
+      width: 250px;
+      text-align: center;
+      border-bottom: 3px solid red;
+      animation: borderRGB 3s linear infinite;
+
+      @keyframes borderRGB {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+
+        100% {
+          filter: hue-rotate(360deg);
+        }
+
+      }
+
+    }
+
+    div.SkillSet {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 10px 0;
+      background: rgba($color: #000000, $alpha: 0.3);
+
+
+      div.SkillCard {
+        background: transparent;
+        display: inline-flex;
+        flex-direction: column;
+        height: auto;
+        width: 300px;
+        margin: 5px 20px;
+        align-items: center;
+        justify-content: start;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 20px;
+
+
+
+        img.SkillIcon {
+          pointer-events: none;
+          height: 92px;
+          width: 92px;
+        }
+
+        span.SkillTitle {
+          pointer-events: none;
+          margin-left: 5px;
+          font-size: 1.25em;
+          font-weight: 600;
+          color: white;
+        }
+
+        &:hover {
+          background: rgba($color: #000000, $alpha: 0.8);
+
+
+        }
+      }
+
+      div.Skill1 {
+        &:hover {
+          box-shadow: 0 0 10px red;
+        }
+      }
+
+      div.Skill2 {
+        &:hover {
+          box-shadow: 0 0 10px blue;
+        }
+      }
+
+      div.Skill3 {
+        &:hover {
+          box-shadow: 0 0 10px purple;
+        }
+      }
+
+      div.Skill4 {
+        &:hover {
+          box-shadow: 0 0 10px yellow;
+        }
+      }
+
+      div.Skill5 {
+        img.SkillIcon {
+          animation: ReactRotate 5s linear infinite;
+
+          @keyframes ReactRotate {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px lightblue;
+        }
+      }
+
+      div.Skill6 {
+        &:hover {
+          box-shadow: 0 0 10px yellow;
+        }
+      }
+    }
+  }
+
+  section#Projects {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    padding: 10vh 5%;
+    align-content: center;
+
+    span.Title {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      color: white;
+      width: 250px;
+      border-bottom: 2px solid red;
+      margin: 20px 0;
+      text-shadow: 0 0 2px grey;
+      text-align: center;
+      animation: borderRGB 5s linear infinite;
+
+      @keyframes borderRGB {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+
+        100% {
+          filter: hue-rotate(360deg);
+        }
+
+      }
+    }
+
+    div.ProjectSet {
+      text-align: center;
+
+      div.ProjectCard {
+        position: relative;
+        display: inline-block;
+        min-width: 280px;
+        margin: 5px 10px;
+        padding: 15px;
+        color: white;
+        height: 60vh;
+        border: 2px solid white;
+        border-radius: 20px;
+        width: 25%;
+        cursor: not-allowed;
+
+        &:hover {
+          background: rgba($color: #000000, $alpha: .3);
+        }
+
+        span.ProjectTitle {
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+
+  section#Contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 10vh 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span.Title {
+      display: block;
+      font-size: 2em;
+
+      width: 250px;
+      text-align: center;
+      border-bottom: 2px solid red;
+      box-shadow: 3px solid red;
+      animation: borderRGB 3s linear infinite;
+    }
+
+    @keyframes borderRGB {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    div.ContactSet {
+      position: relative;
+      margin: auto;
+      display: flex;
+      width: 100%;
+      height: 62px;
+      margin: auto;
+      justify-content: center;
+      background: rgba($color: #000000, $alpha: 0.3);
+
+      div.ContactCard {
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        width: 48px;
+        height: 48px;
+        border: 1px solid transparent;
+        border-radius: 24px;
+        overflow: hidden;
+        transition: 0.25s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          width: 200px;
+          background: rgba($color: #000000, $alpha: 0.5);
+        }
+
+        img.ContactIcon {
+          display: inline-block;
+          height: 48px;
+          width: 48px;
+          border-radius: 50%;
+          background: white;
+          box-shadow: 0 0 1px transparent;
+
+        }
+
+        a.ContactTitle {
+          text-decoration: none;
+          font-size: 1em;
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 56px;
+          transform: translateY(-50%);
+          height: 100%;
+          text-align: center;
+          padding-top: 15px;
+          color: white;
+          pointer-events: none;
+
+        }
+      }
+
+      div.Contact2,
+      div.Contact3,
+      div.Contact4 {
+        cursor: not-allowed;
+      }
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: fit-content;
+
+    nav {
+      position: relative;
+
+      a.LOGO {
+        position: relative;
+      }
+
+      ul {
+        display: none;
+      }
+
+      a.LOGIN_REGISTER {
+        display: none;
+      }
+
+      div.MenuBtn {
+        display: block;
+        position: relative;
+        right: 0;
+        height: 48px;
+        width: 48px;
+        background: transparent;
+        cursor: pointer;
+
+        div.Slice {
+          transition: all .5s ease-in-out;
+          height: 5px;
+          margin: 10px 0;
+          width: 100%;
+          position: relative;
+          background: white;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    nav div.MenuBtn.Sliced {
+      div.Slice:nth-child(1) {
+        transform: rotateZ(45deg) translateX(01px) translateY(20px);
+      }
+
+      div.Slice:nth-child(2) {
+        transform: translateX(-10vw);
+        background: transparent;
+      }
+
+      div.Slice:nth-child(3) {
+        transform: rotateZ(-45deg) translateX(01px) translateY(-20px);
+      }
+    }
+
+    div.Menu.Sliced {
+      display: block;
+
+      a {
+        position: relative;
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0 0 0;
+        text-decoration: none;
+        color: white;
+        
+      }
+    }
+  }
+
+
+
+
+}
