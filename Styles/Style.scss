@@ -102,48 +102,49 @@ main {
     min-height: 100vh;
 
     img.Mountain {
-      position: absolute;
+      position: fixed;
       bottom: 0;
-      width: auto;
-      height: 30vh;
+      width: 15vw;
+      height: auto;
     }
 
     img.Mountain:nth-child(1) {
       right: 0%;
-      z-index: 2;
+      z-index: 0;
     }
 
     img.Mountain:nth-child(2) {
-      right: 20%;
-      z-index: 3;
+      right: 10%;
+      z-index: 0;
     }
 
     img.Mountain:nth-child(3) {
-      right: 40%;
-      z-index: 4;
+      right: 20%;
+      z-index: 0;
     }
 
     img.Moon {
-      position: absolute;
+      position: fixed;
       top: 12vh;
       left: 10%;
       height: 15%;
+      background: white;
       text-shadow: 0 0 10px white;
-      z-index: 1;
+      z-index: 0;
       border-radius: 50%;
       box-shadow: 0 0 20px white;
       filter: blur(1px);
     }
 
     img.settelite {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       right: 10%;
       height: 3vh;
       width: auto;
       animation: setteliteFlow 10s linear infinite;
       animation-delay: 5s;
-      z-index: 1;
+      z-index: -1;
 
       @keyframes setteliteFlow {
         0% {
@@ -169,10 +170,10 @@ main {
     }
 
     div.star {
-      position: absolute;
+      position: fixed;
       animation: starsFlow linear infinite;
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
       box-shadow: 0 0 3px white;
       background: rgba(255, 255, 255);
       border-radius: 50%;
