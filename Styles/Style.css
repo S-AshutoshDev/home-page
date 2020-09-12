@@ -92,7 +92,7 @@ main section#Home {
 main section#Home img.Mountain {
   position: fixed;
   bottom: 0;
-  width: 15vw;
+  width: 25vw;
   height: auto;
 }
 main section#Home img.Mountain:nth-child(1) {
@@ -100,11 +100,11 @@ main section#Home img.Mountain:nth-child(1) {
   z-index: 0;
 }
 main section#Home img.Mountain:nth-child(2) {
-  right: 10%;
+  right: 15%;
   z-index: 0;
 }
 main section#Home img.Mountain:nth-child(3) {
-  right: 20%;
+  right: 30%;
   z-index: 0;
 }
 main section#Home img.Moon {
