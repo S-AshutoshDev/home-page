@@ -455,14 +455,14 @@ main section#Contact div.ContactSet div.Contact4 {
     border-radius: 3px;
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(1) {
-    transform: rotateZ(45deg) translateX(1px) translateY(20px);
+    transform: rotateZ(45deg) translateX(1px) translateY(17px);
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(2) {
     transform: translateX(-10vw);
     background: transparent;
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(3) {
-    transform: rotateZ(-45deg) translateX(1px) translateY(-20px);
+    transform: rotateZ(-45deg) translateX(1px) translateY(-17px);
   }
   header div.Menu.Sliced {
     display: block;
