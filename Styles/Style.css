@@ -440,15 +440,15 @@ main section#Contact div.ContactSet div.Contact4 {
     display: block;
     position: relative;
     right: 0;
-    height: 48px;
-    width: 48px;
+    height: 36px;
+    width: 36px;
     background: transparent;
     cursor: pointer;
   }
   header nav div.MenuBtn div.Slice {
     transition: all 0.5s ease-in-out;
     height: 5px;
-    margin: 10px 0;
+    margin: 7px 0;
     width: 100%;
     position: relative;
     background: white;
