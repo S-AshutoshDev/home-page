@@ -196,7 +196,7 @@ main {
     }
 
     span.Title {
-      font-size: 2.25em;
+      font-size: 1.5em;
       color: rgba($color: #ffffff, $alpha: 1);
       position: absolute;
       width: auto;
@@ -282,8 +282,8 @@ main {
         display: inline-flex;
         flex-direction: column;
         height: auto;
-        width: 300px;
-        margin: 5px 20px;
+        min-width: 280px;
+        margin: 5px 10px;
         align-items: center;
         justify-content: start;
         padding: 20px;
@@ -464,7 +464,7 @@ main {
       margin: auto;
       display: flex;
       width: 100%;
-      height: 62px;
+      height: auto;
       margin: auto;
       justify-content: center;
       background: rgba($color: #000000, $alpha: 0.3);
@@ -594,7 +594,16 @@ main {
     }
   }
 
-
-
-
+}
+@media only screen and (max-width: 768px) {
+  section#Contact {
+    div.ContactSet {
+      flex-direction: column;
+      align-items: center;
+      div.ContactCard {
+        display: block;
+      }
+    }
+  }
+  
 }
