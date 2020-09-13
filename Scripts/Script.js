@@ -1,6 +1,6 @@
 onload = () => {
-  //stars()
-  //textSwap()
+  stars()
+  textSwap()
   onhoverSkillAnime()
   menuInit()
 }
