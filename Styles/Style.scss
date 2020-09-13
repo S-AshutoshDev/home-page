@@ -123,6 +123,26 @@ main {
       z-index: 0;
     }
 
+    @media only screen and (max-width: 768px) {
+      img.Mountain {
+
+        width: 30vw;
+        height: auto;
+      }
+
+      img.Mountain:nth-child(1) {
+        right: 0%;
+      }
+
+      img.Mountain:nth-child(2) {
+        right: 15%;
+      }
+
+      img.Mountain:nth-child(3) {
+        right: 30%;
+      }
+    }
+
     img.Moon {
       position: fixed;
       top: 12vh;
@@ -251,6 +271,7 @@ main {
       font-weight: 900;
       margin: 20px 0;
       color: white;
+      font-weight: 700;
       font-size: 2em;
       width: 250px;
       text-align: center;
@@ -283,8 +304,7 @@ main {
         display: inline-flex;
         flex-direction: column;
         height: auto;
-        min-width: 280px;
-        margin: 5px 10px;
+        min-width: 240px;
         align-items: center;
         justify-content: start;
         padding: 20px;
@@ -305,6 +325,7 @@ main {
           font-size: 1.25em;
           font-weight: 600;
           color: white;
+          font-weight: 700;
         }
 
         &:hover {
@@ -442,7 +463,8 @@ main {
     span.Title {
       display: block;
       font-size: 2em;
-
+      color: white;
+      font-weight: 700;
       width: 250px;
       text-align: center;
       border-bottom: 2px solid red;
@@ -548,15 +570,15 @@ main {
         display: block;
         position: relative;
         right: 0;
-        height: 48px;
-        width: 48px;
+        height: 36px;
+        width: 36px;
         background: transparent;
         cursor: pointer;
 
         div.Slice {
           transition: all .5s ease-in-out;
           height: 5px;
-          margin: 10px 0;
+          margin: 7px 0;
           width: 100%;
           position: relative;
           background: white;
@@ -567,7 +589,7 @@ main {
 
     nav div.MenuBtn.Sliced {
       div.Slice:nth-child(1) {
-        transform: rotateZ(45deg) translateX(01px) translateY(20px);
+        transform: rotateZ(45deg) translateX(01px) translateY(16px);
       }
 
       div.Slice:nth-child(2) {
@@ -576,7 +598,7 @@ main {
       }
 
       div.Slice:nth-child(3) {
-        transform: rotateZ(-45deg) translateX(01px) translateY(-20px);
+        transform: rotateZ(-45deg) translateX(01px) translateY(-16px);
       }
     }
 
@@ -590,21 +612,31 @@ main {
         padding: 10px 0 0 0;
         text-decoration: none;
         color: white;
-        
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          border-bottom: 2px solid white;
+        }
+      }
+
+      a.LOGIN_REGISTER {
+        cursor: not-allowed;
       }
     }
   }
 
 }
+
 @media only screen and (max-width: 768px) {
   section#Contact {
     div.ContactSet {
       flex-direction: column;
       align-items: center;
+
       div.ContactCard {
         display: block;
       }
     }
   }
-  
+
 }

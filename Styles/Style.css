@@ -92,7 +92,7 @@ main section#Home {
 main section#Home img.Mountain {
   position: fixed;
   bottom: 0;
-  width: 25vw;
+  width: 15vw;
   height: auto;
 }
 main section#Home img.Mountain:nth-child(1) {
@@ -100,12 +100,27 @@ main section#Home img.Mountain:nth-child(1) {
   z-index: 0;
 }
 main section#Home img.Mountain:nth-child(2) {
-  right: 15%;
+  right: 10%;
   z-index: 0;
 }
 main section#Home img.Mountain:nth-child(3) {
-  right: 30%;
+  right: 20%;
   z-index: 0;
+}
+@media only screen and (max-width: 768px) {
+  main section#Home img.Mountain {
+    width: 30vw;
+    height: auto;
+  }
+  main section#Home img.Mountain:nth-child(1) {
+    right: 0%;
+  }
+  main section#Home img.Mountain:nth-child(2) {
+    right: 15%;
+  }
+  main section#Home img.Mountain:nth-child(3) {
+    right: 30%;
+  }
 }
 main section#Home img.Moon {
   position: fixed;
@@ -208,6 +223,7 @@ main section#Skills span.Title {
   font-weight: 900;
   margin: 20px 0;
   color: white;
+  font-weight: 700;
   font-size: 2em;
   width: 250px;
   text-align: center;
@@ -234,8 +250,7 @@ main section#Skills div.SkillSet div.SkillCard {
   display: inline-flex;
   flex-direction: column;
   height: auto;
-  min-width: 280px;
-  margin: 5px 10px;
+  min-width: 240px;
   align-items: center;
   justify-content: start;
   padding: 20px;
@@ -253,6 +268,7 @@ main section#Skills div.SkillSet div.SkillCard span.SkillTitle {
   font-size: 1.25em;
   font-weight: 600;
   color: white;
+  font-weight: 700;
 }
 main section#Skills div.SkillSet div.SkillCard:hover {
   background: rgba(0, 0, 0, 0.8);
@@ -352,6 +368,8 @@ main section#Contact {
 main section#Contact span.Title {
   display: block;
   font-size: 2em;
+  color: white;
+  font-weight: 700;
   width: 250px;
   text-align: center;
   border-bottom: 2px solid red;
@@ -455,14 +473,14 @@ main section#Contact div.ContactSet div.Contact4 {
     border-radius: 3px;
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(1) {
-    transform: rotateZ(45deg) translateX(1px) translateY(17px);
+    transform: rotateZ(45deg) translateX(1px) translateY(16px);
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(2) {
     transform: translateX(-10vw);
     background: transparent;
   }
   header nav div.MenuBtn.Sliced div.Slice:nth-child(3) {
-    transform: rotateZ(-45deg) translateX(1px) translateY(-17px);
+    transform: rotateZ(-45deg) translateX(1px) translateY(-16px);
   }
   header div.Menu.Sliced {
     display: block;
@@ -474,6 +492,13 @@ main section#Contact div.ContactSet div.Contact4 {
     padding: 10px 0 0 0;
     text-decoration: none;
     color: white;
+    border-bottom: 2px solid transparent;
+  }
+  header div.Menu.Sliced a:hover {
+    border-bottom: 2px solid white;
+  }
+  header div.Menu.Sliced a.LOGIN_REGISTER {
+    cursor: not-allowed;
   }
 }
 @media only screen and (max-width: 768px) {

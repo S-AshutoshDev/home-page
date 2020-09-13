@@ -1,6 +1,6 @@
 onload = () => {
-  stars()
-  textSwap()
+  //stars()
+  //textSwap()
   onhoverSkillAnime()
   menuInit()
 }
@@ -76,4 +76,11 @@ const menuInit = () => {
     MENU_BTN.classList.toggle(`Sliced`)
     MENU_BAR.classList.toggle(`Sliced`)
   })
+  const LINK = document.querySelectorAll(`header div.Menu a`)
+  LINK.forEach(NavBtn => {
+    NavBtn.addEventListener(`click`, () => {
+      MENU_BTN.classList.toggle(`Sliced`)
+      MENU_BAR.classList.toggle(`Sliced`)  
+    })
+  });
 }
